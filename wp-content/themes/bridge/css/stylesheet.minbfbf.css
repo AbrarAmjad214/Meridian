@@ -2134,7 +2134,8 @@ li.narrow .second .inner ul li:last-child {
 
 .drop_down .narrow .second .inner ul li {
     padding: 0;
-    width: 225px
+    width: 225px;
+    background-color: #D08B0B;
 }
 
 .drop_down .narrow .second .inner ul li a {
