@@ -1426,3 +1426,32 @@
 img.vc_single_image-img.about{
     width: 900px;
 }
+
+@media (max-width: 991px) {
+  .mpc-grid-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  .mpc-grid-images .mpc-item {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+
+  .mpc-grid-images .mpc-grid__image img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .mpc-grid-images .mpc-item {
+    width: 100%;
+  }
+}
