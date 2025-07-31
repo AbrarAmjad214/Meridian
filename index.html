@@ -464,79 +464,79 @@
 	<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
 	<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
 	<meta name="generator"
-		content="Powered by Slider Revolution 6.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."/>
-		<script type="text/javascript">
-	function setREVStartSize(t) {
-		try {
-			var h;
-			var e = document.getElementById(t.c).parentNode.offsetWidth;
+		content="Powered by Slider Revolution 6.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+	<script type="text/javascript">
+		function setREVStartSize(t) {
+			try {
+				var h;
+				var e = document.getElementById(t.c).parentNode.offsetWidth;
 
-			// Fallback to window width if element width is 0 or not a number
-			e = (e === 0 || isNaN(e)) ? window.innerWidth : e;
+				// Fallback to window width if element width is 0 or not a number
+				e = (e === 0 || isNaN(e)) ? window.innerWidth : e;
 
-			// Parse values or assign defaults
-			t.tabw = t.tabw === undefined ? 0 : parseInt(t.tabw);
-			t.thumbw = t.thumbw === undefined ? 0 : parseInt(t.thumbw);
-			t.tabh = t.tabh === undefined ? 0 : parseInt(t.tabh);
-			t.thumbh = t.thumbh === undefined ? 0 : parseInt(t.thumbh);
-			t.tabhide = t.tabhide === undefined ? 0 : parseInt(t.tabhide);
-			t.thumbhide = t.thumbhide === undefined ? 0 : parseInt(t.thumbhide);
-			t.mh = (t.mh === undefined || t.mh === "" || t.mh === "auto") ? 0 : parseInt(t.mh, 0);
+				// Parse values or assign defaults
+				t.tabw = t.tabw === undefined ? 0 : parseInt(t.tabw);
+				t.thumbw = t.thumbw === undefined ? 0 : parseInt(t.thumbw);
+				t.tabh = t.tabh === undefined ? 0 : parseInt(t.tabh);
+				t.thumbh = t.thumbh === undefined ? 0 : parseInt(t.thumbh);
+				t.tabhide = t.tabhide === undefined ? 0 : parseInt(t.tabhide);
+				t.thumbhide = t.thumbhide === undefined ? 0 : parseInt(t.thumbhide);
+				t.mh = (t.mh === undefined || t.mh === "" || t.mh === "auto") ? 0 : parseInt(t.mh, 0);
 
-			// Fullscreen layout
-			if (t.layout === "fullscreen" || t.l === "fullscreen") {
-				h = Math.max(t.mh, window.innerHeight);
-			} else {
-				// Ensure gw and gh are arrays
-				t.gw = Array.isArray(t.gw) ? t.gw : [t.gw];
-				t.gh = (t.el === undefined || t.el === "" || (Array.isArray(t.el) && t.el.length === 0)) ? t.gh : t.el;
-				t.gh = Array.isArray(t.gh) ? t.gh : [t.gh];
+				// Fullscreen layout
+				if (t.layout === "fullscreen" || t.l === "fullscreen") {
+					h = Math.max(t.mh, window.innerHeight);
+				} else {
+					// Ensure gw and gh are arrays
+					t.gw = Array.isArray(t.gw) ? t.gw : [t.gw];
+					t.gh = (t.el === undefined || t.el === "" || (Array.isArray(t.el) && t.el.length === 0)) ? t.gh : t.el;
+					t.gh = Array.isArray(t.gh) ? t.gh : [t.gh];
 
-				// Fill missing gw and gh values
-				for (var i in t.rl) {
-					if (t.gw[i] === undefined || t.gw[i] === 0) t.gw[i] = t.gw[i - 1];
-					if (t.gh[i] === undefined || t.gh[i] === 0) t.gh[i] = t.gh[i - 1];
-				}
-
-				// Adjust tab and thumb size for small screens
-				t.tabw = t.tabhide >= e ? 0 : t.tabw;
-				t.thumbw = t.thumbhide >= e ? 0 : t.thumbw;
-				t.tabh = t.tabhide >= e ? 0 : t.tabh;
-				t.thumbh = t.thumbhide >= e ? 0 : t.thumbh;
-
-				// Choose correct responsive index
-				var r;
-				var a = new Array(t.rl.length);
-				var n = 0;
-				for (var i in t.rl) {
-					a[i] = t.rl[i] < window.innerWidth ? 0 : t.rl[i];
-				}
-				r = a[0];
-				for (var i in a) {
-					if (r > a[i] && a[i] > 0) {
-						r = a[i];
-						n = i;
+					// Fill missing gw and gh values
+					for (var i in t.rl) {
+						if (t.gw[i] === undefined || t.gw[i] === 0) t.gw[i] = t.gw[i - 1];
+						if (t.gh[i] === undefined || t.gh[i] === 0) t.gh[i] = t.gh[i - 1];
 					}
+
+					// Adjust tab and thumb size for small screens
+					t.tabw = t.tabhide >= e ? 0 : t.tabw;
+					t.thumbw = t.thumbhide >= e ? 0 : t.thumbw;
+					t.tabh = t.tabhide >= e ? 0 : t.tabh;
+					t.thumbh = t.thumbhide >= e ? 0 : t.thumbh;
+
+					// Choose correct responsive index
+					var r;
+					var a = new Array(t.rl.length);
+					var n = 0;
+					for (var i in t.rl) {
+						a[i] = t.rl[i] < window.innerWidth ? 0 : t.rl[i];
+					}
+					r = a[0];
+					for (var i in a) {
+						if (r > a[i] && a[i] > 0) {
+							r = a[i];
+							n = i;
+						}
+					}
+
+					// Calculate scaling factor and height
+					var d = (e > (t.gw[n] + t.tabw + t.thumbw)) ? 1 : (e - (t.tabw + t.thumbw)) / t.gw[n];
+					h = (t.gh[n] * d) + (t.tabh + t.thumbh);
 				}
 
-				// Calculate scaling factor and height
-				var d = (e > (t.gw[n] + t.tabw + t.thumbw)) ? 1 : (e - (t.tabw + t.thumbw)) / t.gw[n];
-				h = (t.gh[n] * d) + (t.tabh + t.thumbh);
+				// Apply height to the slider element and wrapper
+				if (window.rs_init_css === undefined) {
+					window.rs_init_css = document.head.appendChild(document.createElement("style"));
+				}
+
+				document.getElementById(t.c).height = h;
+				window.rs_init_css.innerHTML += "#" + t.c + "_wrapper { height: " + h + "px }";
+
+			} catch (t) {
+				console.log("Failure at Presize of Slider: " + t);
 			}
-
-			// Apply height to the slider element and wrapper
-			if (window.rs_init_css === undefined) {
-				window.rs_init_css = document.head.appendChild(document.createElement("style"));
-			}
-
-			document.getElementById(t.c).height = h;
-			window.rs_init_css.innerHTML += "#" + t.c + "_wrapper { height: " + h + "px }";
-
-		} catch (t) {
-			console.log("Failure at Presize of Slider: " + t);
 		}
-	}
-</script>
+	</script>
 
 	<style type="text/css" data-type="vc_custom-css">
 		.qode-report-sheet {
@@ -777,11 +777,16 @@
 										<div class="logo_wrapper">
 											<div class="q_logo">
 												<a itemprop="url" href="index.html">
-												<img itemprop="image" class="normal" src="wp-content/uploads/2018/05/logo.png" alt="Logo">
-												<img itemprop="image" class="light" src="wp-content/uploads/2018/05/logo.png" alt="Logo">
-												<img itemprop="image" class="dark" src="wp-content/uploads/2018/05/logo.png" alt="Logo">
-												<img itemprop="image" class="sticky" src="wp-content/uploads/2018/05/logo.png" alt="Logo">
-												<img itemprop="image" class="mobile" src="wp-content/uploads/2018/05/logo.png" alt="Logo">
+													<img itemprop="image" class="normal"
+														src="wp-content/uploads/2018/05/logo.png" alt="Logo">
+													<img itemprop="image" class="light"
+														src="wp-content/uploads/2018/05/logo.png" alt="Logo">
+													<img itemprop="image" class="dark"
+														src="wp-content/uploads/2018/05/logo.png" alt="Logo">
+													<img itemprop="image" class="sticky"
+														src="wp-content/uploads/2018/05/logo.png" alt="Logo">
+													<img itemprop="image" class="mobile"
+														src="wp-content/uploads/2018/05/logo.png" alt="Logo">
 												</a>
 											</div>
 										</div>
@@ -870,10 +875,9 @@
 															</li>
 															<li id="nav-menu-item-1496"
 																class="menu-item menu-item-type-post_type menu-item-object-page ">
-																<a href="manpower-services/index.html"
-																	class=""><i
-																		class="menu_icon blank fa"></i><span>Manpower Services</span><span
-																		class="plus"></span></a>
+																<a href="manpower-services/index.html" class=""><i
+																		class="menu_icon blank fa"></i><span>Manpower
+																		Services</span><span class="plus"></span></a>
 															</li>
 														</ul>
 													</div>
@@ -898,14 +902,14 @@
 													</div>
 												</div>
 											</li>
-											
+
 											</li>
 											<li id="nav-menu-item-222"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub narrow">
 												<a href="contact-us/index.html" class=""><i
 														class="menu_icon blank fa"></i><span>Contact Us</span><span
 														class="plus"></span></a>
-												
+
 											</li>
 										</ul>
 									</nav>
@@ -982,9 +986,9 @@
 													</li>
 													<li id="mobile-menu-item-1496"
 														class="menu-item menu-item-type-post_type menu-item-object-page ">
-														<a href="manpower-services/index.html"
-															class=""><span>Manpower Services</span></a><span
-															class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+														<a href="manpower-services/index.html" class=""><span>Manpower
+																Services</span></a><span class="mobile_arrow"><i
+																class="fa fa-angle-right"></i><i
 																class="fa fa-angle-down"></i></span>
 													</li>
 												</ul>
@@ -1004,14 +1008,14 @@
 													</li>
 												</ul>
 											</li>
-											
+
 											<li id="mobile-menu-item-222"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub">
 												<a href="contact-us/index.html" class=""><span>Contact
 														Us</span></a><span class="mobile_arrow"><i
 														class="fa fa-angle-right"></i><i
 														class="fa fa-angle-down"></i></span>
-												
+
 											</li>
 										</ul>
 									</nav>
@@ -1044,7 +1048,8 @@
 												title="Slide3a" width="1920" height="1100" class="rev-slidebg"
 												data-no-retina>
 											<!---->
-											<rs-layer id="slider-1-slide-1-layer-1" data-type="text" data-color="#ffffff||#ffffff||#ffffff||#D08B0B"
+											<rs-layer id="slider-1-slide-1-layer-1" data-type="text"
+												data-color="#ffffff||#ffffff||#ffffff||#D08B0B"
 												data-xy="xo:364px,101px,101px,26px;yo:150px,148px,200px,129px;"
 												data-text="s:15;l:22;ls:2px;fw:400,400,400,300;a:inherit;"
 												data-basealign="slide" data-rsp_o="off"
@@ -1066,7 +1071,7 @@
 												style="z-index:2;background-color:rgba(10,1,1,0.5);font-family:Oswald;text-transform:capitalize;">An
 												Integrated <br />
 												Service
-											</rs-layer><!---->				
+											</rs-layer><!---->
 											<rs-layer id="slider-1-slide-1-layer-4" data-type="text"
 												data-xy="xo:369px,98px,98px,26px;yo:453px,427px,479px,333px;"
 												data-text="w:nowrap,nowrap,nowrap,normal;s:18;l:30;a:inherit;"
@@ -1078,7 +1083,7 @@
 												data-frame_999="o:0;tp:600;st:w;sR:7900;"
 												style="z-index:7;background-color:rgba(10,10,10,0.6);font-family:Open Sans;">We
 												collaboratively work to achieve excellence, beyond service
-											</rs-layer><!---->			
+											</rs-layer><!---->
 											<rs-layer id="slider-1-slide-1-layer-5" data-type="text"
 												data-xy="xo:369px,98px,98px,26px;yo:539px,538px,590px,484px;"
 												data-text="l:22;a:inherit;" data-basealign="slide" data-rsp_o="off"
@@ -1088,15 +1093,16 @@
 												style="z-index:8;font-family:Open Sans;"><a itemprop="url"
 													href="#business-sectors" target="_self" class="qbutton  default"
 													style="">Read More</a>
-											</rs-layer><!----> 
+											</rs-layer><!---->
 										</rs-slide>
 										<rs-slide data-key="rs-4" data-title="Slide"
 											data-thumb="//alfajerfm.com/wp-content/uploads/2018/05/Slide2-100x50.jpg"
 											data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
 											<img src="wp-content/uploads/2018/05/Slide2.jpg" title="Slide2" width="1920"
 												height="1100" class="rev-slidebg" data-no-retina>
-											<!---->				
-											<rs-layer id="slider-1-slide-4-layer-1" data-type="text" data-color="#ffffff||#ffffff||#ffffff||#D08B0B"
+											<!---->
+											<rs-layer id="slider-1-slide-4-layer-1" data-type="text"
+												data-color="#ffffff||#ffffff||#ffffff||#D08B0B"
 												data-xy="xo:330px,101px,101px,26px;yo:158px,148px,200px,129px;"
 												data-text="s:15;l:22;ls:2px;fw:400,400,400,300;a:inherit;"
 												data-basealign="slide" data-rsp_o="off" data-rsp_bd="off"
@@ -1106,7 +1112,7 @@
 												data-frame_999="o:0;tp:600;st:w;sR:8200;"
 												style="z-index:5;background-color:rgba(10,10,10,0.7);font-family:Open Sans;text-transform:uppercase;">I
 												am awesome, I am Meridian Prime Facilities Management Services LLC
-											</rs-layer><!---->				
+											</rs-layer><!---->
 											<rs-layer id="slider-1-slide-4-layer-2" data-type="text"
 												data-xy="xo:330px,94px,94px,22px;yo:206px,200px,252px,163px;"
 												data-text="s:80,80,80,45;l:90,90,90,55;a:inherit;"
@@ -1119,7 +1125,8 @@
 												by<br />
 												Value
 											</rs-layer><!---->
-												<rs-layer id="slider-1-slide-4-layer-3" class="tp-shape tp-shapewrapper" data-type="shape"
+											<rs-layer id="slider-1-slide-4-layer-3" class="tp-shape tp-shapewrapper"
+												data-type="shape"
 												data-xy="xo:370px,98px,98px,26px;yo:546px,403px,455px,309px;"
 												data-text="a:inherit;" data-dim="w:73px;h:1px;" data-basealign="slide"
 												data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:right;o:1;tp:600;"
@@ -1148,7 +1155,7 @@
 												style="z-index:9;font-family:Open Sans;"><a itemprop="url"
 													href="about-al-fajer-fm/index.html#values" target="_self"
 													class="qbutton  default" style="">Read More</a>
-											</rs-layer><!----> 
+											</rs-layer><!---->
 										</rs-slide>
 										<rs-slide data-key="rs-21" data-title="Slide"
 											data-thumb="//alfajerfm.com/wp-content/uploads/2018/06/7-100x50.jpg"
@@ -1167,7 +1174,7 @@
 												data-frame_999="o:0;tp:600;st:w;sR:8100;"
 												style="z-index:5;background-color:rgba(10,1,1,0.7);font-family:Oswald;text-transform:capitalize;">Delivering
 												experience <br> beyond service
-											</rs-layer><!----> 
+											</rs-layer><!---->
 										</rs-slide>
 									</rs-slides>
 									<rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
@@ -1327,7 +1334,7 @@
 													<div class="vc_row wpb_row section vc_row-fluid vc_inner mpc-row"
 														style=" text-align:left;">
 														<div class=" full_section_inner clearfix">
-															<div class="wpb_column vc_column_container vc_col-sm-3 mpc-column"
+															<div class="wpb_column vc_column_container vc_col-sm-6 mpc-column"
 																data-column-id="mpc_column-83682c5c5427803">
 																<div class="vc_column-inner">
 																	<div class="wpb_wrapper">
@@ -1348,7 +1355,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="wpb_column vc_column_container vc_col-sm-9 mpc-column"
+															<div class="wpb_column vc_column_container vc_col-sm-6 mpc-column"
 																data-column-id="mpc_column-33682c5c5427dc4">
 																<div class="vc_column-inner">
 																	<div class="wpb_wrapper">
@@ -1359,7 +1366,10 @@
 																					known for our professionalism and
 																					our reliable services across the UAE
 																					and for our excellence in all
-																					aspects of facilities management.  Meridian Prime Facilities Management Services LLC Facilities Management is a
+																					aspects of facilities management.
+																					Meridian Prime Facilities Management
+																					Services LLC Facilities Management
+																					is a
 																					results-driven company committed to
 																					lead the regional facilities
 																					management (FM) industry.</h4>
@@ -1905,7 +1915,256 @@
 									</div>
 								</div>
 							</div>
-							
+							<div class="vc_row wpb_row section vc_row-fluid  vc_custom_1527753136300 mpc-row"
+								style=" text-align:left;">
+								<div class=" full_section_inner clearfix">
+									<div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-12 mpc-column"
+										data-column-id="mpc_column-67682c5c5435725">
+										<div class="vc_column-inner vc_custom_1521199250810">
+											<div class="wpb_wrapper">
+												<div id="mpc_grid_images-22682c5c5431164"
+													class="mpc-grid-images mpc-effect--none mpc-overlay--slide-up mpc-inited"
+													data-grid-cols="4" data-align="middle-center"
+													style="opacity: 1; position: relative; height: 487.218px;">
+													<div class="mpc-item"
+														style="position: absolute; left: 0px; top: 0px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="300" height="200"
+																src="https://alfajerfm.com/wp-content/uploads/2018/06/Security-1-300x200.jpg"
+																class="mpc-transition attachment-medium" alt="Security"
+																loading="lazy" title="Security"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/06/Security-1-300x200.jpg 300w, https://alfajerfm.com/wp-content/uploads/2018/06/Security-1-768x512.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/06/Security-1-1024x683.jpg 1024w, https://alfajerfm.com/wp-content/uploads/2018/06/Security-1-700x467.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/06/Security-1.jpg 1350w"
+																sizes="(max-width: 300px) 100vw, 300px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/06/Security-1.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 171px; top: 0px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="216" height="300"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/Steward-e1527752200452-216x300.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="Steward"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/Steward-e1527752200452-216x300.jpg 216w, https://alfajerfm.com/wp-content/uploads/2018/05/Steward-e1527752200452-768x1068.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/Steward-e1527752200452-736x1024.jpg 736w, https://alfajerfm.com/wp-content/uploads/2018/05/Steward-e1527752200452-700x974.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/Steward-e1527752200452.jpg 900w"
+																sizes="(max-width: 216px) 100vw, 216px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/Steward-e1527752200452.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 342px; top: 0px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="300" height="200"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/Security-300x200.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="Security"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/Security-300x200.jpg 300w, https://alfajerfm.com/wp-content/uploads/2018/05/Security-768x512.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/Security-1024x683.jpg 1024w, https://alfajerfm.com/wp-content/uploads/2018/05/Security-700x467.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/Security.jpg 1350w"
+																sizes="(max-width: 300px) 100vw, 300px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/Security.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 514px; top: 0px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="200" height="300"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/Pesticides-200x300.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="Pesticides"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/Pesticides-200x300.jpg 200w, https://alfajerfm.com/wp-content/uploads/2018/05/Pesticides-768x1152.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/Pesticides-683x1024.jpg 683w, https://alfajerfm.com/wp-content/uploads/2018/05/Pesticides-700x1050.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/Pesticides.jpg 900w"
+																sizes="(max-width: 200px) 100vw, 200px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/Pesticides.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 0px; top: 117px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="200" height="300"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/Parking-Lot-Cleaning-200x300.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="Parking Lot Cleaning"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/Parking-Lot-Cleaning-200x300.jpg 200w, https://alfajerfm.com/wp-content/uploads/2018/05/Parking-Lot-Cleaning-768x1152.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/Parking-Lot-Cleaning-683x1024.jpg 683w, https://alfajerfm.com/wp-content/uploads/2018/05/Parking-Lot-Cleaning-700x1050.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/Parking-Lot-Cleaning.jpg 900w"
+																sizes="(max-width: 200px) 100vw, 200px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/Parking-Lot-Cleaning.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 342px; top: 117px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="300" height="200"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/Maids-300x200.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="Maids"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/Maids-300x200.jpg 300w, https://alfajerfm.com/wp-content/uploads/2018/05/Maids-768x512.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/Maids-1024x683.jpg 1024w, https://alfajerfm.com/wp-content/uploads/2018/05/Maids-700x467.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/Maids.jpg 1350w"
+																sizes="(max-width: 300px) 100vw, 300px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/Maids.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 171px; top: 234px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="200" height="300"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/Hospitalty-200x300.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="Hospitalty"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/Hospitalty-200x300.jpg 200w, https://alfajerfm.com/wp-content/uploads/2018/05/Hospitalty-768x1152.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/Hospitalty-683x1024.jpg 683w, https://alfajerfm.com/wp-content/uploads/2018/05/Hospitalty-700x1050.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/Hospitalty.jpg 900w"
+																sizes="(max-width: 200px) 100vw, 200px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/Hospitalty.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 342px; top: 235px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="200" height="300"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/Floor-Cleaning-200x300.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="Floor Cleaning"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/Floor-Cleaning-200x300.jpg 200w, https://alfajerfm.com/wp-content/uploads/2018/05/Floor-Cleaning-768x1152.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/Floor-Cleaning-683x1024.jpg 683w, https://alfajerfm.com/wp-content/uploads/2018/05/Floor-Cleaning-700x1050.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/Floor-Cleaning.jpg 900w"
+																sizes="(max-width: 200px) 100vw, 200px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/Floor-Cleaning.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 514px; top: 252px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="300" height="200"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/ENGG2-300x200.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="ENGG2"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/ENGG2-300x200.jpg 300w, https://alfajerfm.com/wp-content/uploads/2018/05/ENGG2-768x512.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/ENGG2-1024x683.jpg 1024w, https://alfajerfm.com/wp-content/uploads/2018/05/ENGG2-700x467.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/ENGG2.jpg 1350w"
+																sizes="(max-width: 300px) 100vw, 300px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/ENGG2.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 0px; top: 369px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="300" height="200"
+																src="https://alfajerfm.com/wp-content/uploads/2018/05/Window-Cleaning-300x200.jpg"
+																class="mpc-transition attachment-medium" alt=""
+																loading="lazy" title="Window Cleaning"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/05/Window-Cleaning-300x200.jpg 300w, https://alfajerfm.com/wp-content/uploads/2018/05/Window-Cleaning-768x512.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/05/Window-Cleaning-1024x683.jpg 1024w, https://alfajerfm.com/wp-content/uploads/2018/05/Window-Cleaning-700x467.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/05/Window-Cleaning.jpg 1350w"
+																sizes="(max-width: 300px) 100vw, 300px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/05/Window-Cleaning.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mpc-item"
+														style="position: absolute; left: 514px; top: 369px;">
+														<div onclick="" class="mpc-grid__image mpc-transition"><img
+																width="300" height="200"
+																src="https://alfajerfm.com/wp-content/uploads/2018/06/Landscaping-300x200.jpg"
+																class="mpc-transition attachment-medium"
+																alt="Al Fajer Landscaping Services" loading="lazy"
+																title="Landscaping"
+																srcset="https://alfajerfm.com/wp-content/uploads/2018/06/Landscaping-300x200.jpg 300w, https://alfajerfm.com/wp-content/uploads/2018/06/Landscaping-768x512.jpg 768w, https://alfajerfm.com/wp-content/uploads/2018/06/Landscaping-1024x683.jpg 1024w, https://alfajerfm.com/wp-content/uploads/2018/06/Landscaping-700x467.jpg 700w, https://alfajerfm.com/wp-content/uploads/2018/06/Landscaping.jpg 1350w"
+																sizes="(max-width: 300px) 100vw, 300px">
+															<div class="mpc-item-overlay mpc-transition">
+																<div class="mpc-overlay--vertical-wrap">
+																	<div class="mpc-overlay--vertical"><a
+																			href="https://alfajerfm.com/wp-content/uploads/2018/06/Landscaping.jpg"
+																			rel="mpc[mpc_grid_images-22682c5c5431164]"
+																			class="mpc-icon-anchor mpc-magnific-popup"><i
+																				class="mpc-item-overlay__icon mpc-type--lightbox mi mi-search mpc-icon--icon"></i></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
 							<div class="vc_row wpb_row section vc_row-fluid  vc_custom_1527530759458  grid_section mpc-row"
 								style=" padding-top:2px; padding-bottom:2px; text-align:left;">
 								<div class=" section_inner clearfix">
@@ -2073,7 +2332,8 @@
 															<div id="text-5" class="widget widget_text">
 																<h5>Dubai</h5>
 																<div class="textwidget">
-																	<p>Office no: 1802C Ontario Tower, Business Bay, Dubai UAE<br />
+																	<p>Office no: 1802C Ontario Tower, Business Bay,
+																		Dubai UAE<br />
 																		Email: Info@Meridianprimefm.com<br />
 																		Phone: +97142991801</p>
 																</div>
@@ -2085,7 +2345,7 @@
 										</div>
 										<div class="column2 footer_col3">
 											<div class="column_inner">
-												
+
 											</div>
 										</div>
 									</div>
@@ -2115,7 +2375,7 @@
 											</div>
 										</div>
 									</div>
-									
+
 								</div>
 							</div>
 						</div>
